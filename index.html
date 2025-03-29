@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Multiplication</title>
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 20px;
+            min-height: 100vh;
+        }
+
+        input[type='text'] {
+            padding: 5px 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid #000;
+        }
+
+        input[type='text']:focus {
+            border: 1px solid green;
+        }
+
+        button {
+            padding: 9px 18px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            background: green;
+        }
+
+        button:active {
+            background: hsl(120, 100%, 20%);
+        }
+
+        span.table {
+            display: block;
+        }
+
+        .res {
+            text-align: center;
+        }
+    </style>
+
+    <!-- JS Source -->
+    <script defer src="./script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Multiplication Table</h1>
+
+        <div>
+            <input type="text" class="input"/>
+            <button class="submit">Get Data</button>
+        </div>
+
+        <div class="res">
+            <p>Result: </p>
+
+            <p class="display">
+                Type any number on input to see the result.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
