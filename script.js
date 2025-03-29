@@ -1,24 +1,3 @@
-// const h1 = document.getElementsByTagName("h1")
-
-// let h1Arr = [...h1]
-
-// let hArr = new Array(...h1)
-
-// for(i = 0; i < h1.length; i++) {
-//     h1[i].style.color = 'red'
-// }
-
-// for(let h of h1) {
-//     h.style.color = 'red'
-// }
-
-// console.log(hArr)
-// console.log(h1Arr)
-
-// hArr.forEach((h) => {
-//     console.log(h.innerText)
-// })
-
 const input = document.querySelector(".input")
 const submitBtn = document.querySelector(".submit")
 const display = document.querySelector(".display")
@@ -27,7 +6,13 @@ let num = 5
 
 submitBtn.addEventListener("click", () => {
     if(input.value <= 0 || isNaN(input.value)) {
-        display.innerHTML = "Invalid Number. Please type positive value or greater than 0."
+        display.style.padding = "10px"
+        display.style.background = "red"
+        display.innerHTML = `
+                                <span class="error">
+                                    Invalid Number. Please type positive value or greater than zero.
+                                </span>
+                            `
     } else {
         let text = ""
     
@@ -42,6 +27,10 @@ submitBtn.addEventListener("click", () => {
                                 `
         }
 
+        display.style.padding = "20px 0 10px"
+        display.style.width = "400px"
+        display.style.color = "#000"
+        display.style.background = "lightgreen"
         display.innerHTML = text
     }
 })
